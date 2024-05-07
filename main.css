@@ -1,0 +1,185 @@
+body {
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--dark_backgroung, #d0e7f7);
+    transition: .4s;
+    font-size: 14px;
+    font-weight: 300;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.face {
+    background-color: var(--dark_color, #8ac5f0);
+    height: 659px;
+    width: 587px;
+    left: 50%;
+    top: 50%;
+    margin:-350px 0 0 -289px;
+    position:absolute;
+    border: 6px solid var(--white-color, #003869);
+    border-radius: 50px;
+
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    margin: 30px 0 0 425px;
+    border: #003869;
+  }
+  
+.switch input { 
+    display: none;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dark_color, #8ac5f0);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 10px;
+    border: 6px solid var(--white-color, #003869);
+}
+
+.slider:hover {
+    transform: scale(1.04);
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--white-color, #003869);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(50px);
+    -ms-transform: translateX(50px);
+    transform: translateX(50px);
+}
+
+
+.dark-theme {
+    --dark_color: #033869;
+    --light-color: #8ac5f0;
+    --dark_active: #0b5dab;
+    --white-color: #fff; 
+    --black-color: #071634; 
+    --dark_backgroung: #01213d;
+    --last_key: #033158; 
+
+}
+
+.screen {
+    background-color: var(--dark_backgroung, #d0e7f7);
+    height: 100px;
+    width: 500px;
+    left: 50%;
+    top: 50%;
+    margin: -210px 0 0 -255px;
+    position:absolute;
+    border: 6px solid var(--white-color, #003869);
+    border-radius: 10px;
+
+}
+
+.screen h1 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-left: 50%;
+    margin-top: 50%;
+    margin: 15px 0 0 25px; 
+    line-height: 70px;
+    font-family: "Zen Dots", sans-serif;
+    color: var(--white-color, #003869);
+}
+
+.keyboard {
+    height: 388px;
+    width: 510px;
+    left: 50%;
+    top: 50%;
+    margin: -80px 0 0 -255px;
+    position:absolute;
+
+
+}
+
+.row {
+    display: flex;
+    height: 95px;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.key {
+    height: 75px;
+    width: 115px;
+    border: 6px solid var(--white-color, #003869);
+    border-radius: 10px;
+    color: var(--white-color, #003869);
+    background-color: var(--dark_backgroung, #d0e7f7);
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 100px;
+    display: flex;
+    transition: transform .1s ease;
+}
+
+.key:last-of-type {
+    height: 75px;
+    width: 115px;
+    border: 6px solid var(--white-color, #003869);
+    border-radius: 10px;
+    color: var(--white-color, #003869);
+    background-color: var(--last_key, #9ed1f5);
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 100px;
+    display: flex;
+    transition: transform .1s ease;
+}
+
+.key:hover {
+    transform: scale(1.02);
+    background-color: var(--black-color, #fff);
+}
+
+.key:active {
+    transform: scale(0.98);
+    background-color: var(--dark_active, #8ac5f0);
+}
+
+.key h1 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 70px;
+    font-family: "Zen Dots", sans-serif;
+
+
+}
+
